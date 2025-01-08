@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="icon" href="logo.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sasha'sWorkshop.com</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <script>
+        // Función para verificar si el elemento está en el viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return rect.top >= 0 && rect.bottom <= window.innerHeight;
+        }
+        
+        // Función para activar las secciones cuando se hace scroll
+        function handleScroll() {
+            const projectTitle = document.querySelector('.project-title');
+            const projectImages = document.querySelectorAll('.project-image');
+        
+            // Comprobamos si el título y las imágenes están en el viewport
+            if (projectTitle && isInViewport(projectTitle)) {
+                projectTitle.classList.add('visible');
+            } else {
+                projectTitle.classList.remove('visible');
+            }
+        
+            projectImages.forEach(image => {
+                if (isInViewport(image)) {
+                    image.classList.add('visible');
+                } else {
+                    image.classList.remove('visible');
+                }
+            });
+        }
+        
+        // Ejecutar la función de scroll cada vez que se haga scroll
+        window.addEventListener('scroll', handleScroll);
+        
+        // Asegurar que las secciones sean comprobadas al cargar la página
+        window.addEventListener('load', handleScroll);
+        
+        // También comprobamos al cargar la página si las imágenes y el título están ya visibles
+        handleScroll();
+        </script>
+        
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logotipo" class="logo-img normal">
+            <a href="index.html"><img src="img/logoInvertido.png" alt="Logotipo Hover" class="logo-img hover"></a>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button> <!-- Botón para menú -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="contact.html" id="contact-button">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+<div class="Principal"></div>
+    
+
+    <!-- Main Content Section -->
+    <section class="project-presentation">
+        <div class="presentation-container">
+            <h1 class="project-title">KOA</h1>
+            <h2 class="project-subtitle">Product Design - Armchair/Stool</h2>
+            <p class="project-description">
+               
+                KOA is born from the idea of merging the best of two worlds: the comfort of an armchair and the versatility of a stool. This piece offers a cozy, inviting feel while infusing warmth and personality into any corner of the home. Its artisanal craftsmanship and intricate design elevate each piece beyond a mere accessory.
+            </p>
+    
+            <!-- Contenedor flexible para la imagen principal -->
+            <div class="main-image-container">
+                <img src="img/koaMain.png" alt="Imagen del Proyecto" class="project-image main">
+            </div>
+    
+            <!-- Contenedor de las dos imágenes a la izquierda y derecha -->
+            <div class="image-boxes">
+                <div class="image-box left">
+                    <img src="img/koa3.png" alt="Imagen Izquierda" class="project-image">
+                </div>
+                <div class="image-box right">
+                    <img src="img/koa1.png" alt="Imagen Derecha" class="project-image">
+                </div>
+            </div>
+    
+            <div class="text-container">
+                <h3 class="project-section-title">SOFTWARE & TOOLS</h3>
+                <p class="project-details">AUTODESK Fusion 360 & Keyshot Studio </p>
+    
+                <h3 class="project-section-title">RESULTS</h3>
+                <p class="project-results">
+                    Working on the prototype for this project at the University FabLAB was an amazing experience. I got to use all sorts of tools, like the 3Exes CNC, orbital sander, drills, and more, which gave me a hands-on understanding of how a design comes to life. It was really cool seeing how everything fits together and learning more about the details of assembly and finishes. It was a great way to build up my woodworking skills.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 Sasha's Workshop - All rights reserved</p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+
+</body>
+
+</html>
