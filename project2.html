@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    
 </head>
 
 <body>
@@ -49,7 +51,7 @@
         
         // También comprobamos al cargar la página si las imágenes y el título están ya visibles
         handleScroll();
-        </script>
+    </script>
         
     <!-- Header Section -->
     <header>
@@ -57,65 +59,61 @@
             <img src="img/logo.png" alt="Logotipo" class="logo-img normal">
             <a href="index.html"><img src="img/logoInvertido.png" alt="Logotipo Hover" class="logo-img hover"></a>
         </div>
-        <button class="menu-toggle" onclick="toggleMenu()" id="menuButton">☰</button> <!-- Botón para menú -->
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button> <!-- Botón para menú -->
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="portfolio.html">My Work</a></li>
                 <li><a href="about.html">About</a></li>
-
-                <li><a href="contact.html" id="contact-button">Contacto</a></li>
+                <li><a href="contact.html" id="contact-button">Contact</a></li>
             </ul>
         </nav>
     </header>
-    
-<div class="Principal"></div>
-    
+
 
     <!-- Main Content Section -->
     <section class="project-presentation">
         <div class="presentation-container">
-            <h1 class="project-title"> Horus</h1>
-            <h2 class="project-subtitle">Product Design - Watch</h2>
+            <h1 class="project-title">HORUS</h1>
+            <h2 class="project-subtitle">Product Design - AUTOMATIC WATCH</h2>
             <p class="project-description">
                 This concept is a classic-style watch inspired by timeless elegance and the strength of the desert. Its automatic mechanical movement ensures precision, while the army-style bracelet adds durability. The bronze finish with rose gold hues reflects the warm tones of desert dunes, making it a refined yet bold piece for those who appreciate detail and design.
             </p>
     
             <!-- Contenedor flexible para la imagen principal -->
-            <div class="main-image-container">
-                <img src="img/relojMain.png" alt="Imagen del Proyecto" class="project-image main">
-            </div>
-    
-            <!-- Contenedor de las dos imágenes a la izquierda y derecha -->
-            <div class="image-boxes">
-                <div class="image-box left">
-                    <img src="img/reloj1.png" alt="Imagen Izquierda" class="project-image">
-                </div>
-                <div class="image-box right">
-                    <img src="img/reloj2.png" alt="Imagen Derecha" class="project-image">
-                </div>
-            </div>
-    
-            <div class="text-container">
-                <h3 class="project-section-title">SOFTWARE & TOOLS</h3>
-                <p class="project-details">RHINOCEROS 8 & Keyshot Studio</p>
-    
-                <h3 class="project-section-title">RESULTS</h3>
-                <p class="project-results">
-                    This project was a personal challenge to tackle 3D modeling of a piece with very small dimensions, learning to work precisely on the tiniest details. It was part of the 3D Modeling course in my third year of university, allowing me to consolidate my knowledge and skills in a practical context.
-                </p>
-            </div>
-        </div>
-    </section>
-    
+            <div class="main-video-container">
+  <video class="project-video main" autoplay muted loop playsinline>
+    <source src="img/default.233.mp4" type="video/mp4">
+    Tu navegador no soporta el vídeo.
+  </video>
+</div>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>© 2024 Sasha's Workshop - All rights reserved</p>
-    </footer>
+<!-- Texto descriptivo del proyecto -->
+<div class="text-container">
+  <h3 class="project-section-title">SOFTWARE & TOOLS</h3>
+  <p class="project-details">Rhinoceros 8 & Keyshot Studio</p>
+
+  <h3 class="project-section-title">RESULTS</h3>
+  <p class="project-results">
+   This project was a personal challenge to tackle 3D modeling of a piece with very small dimensions, learning to work precisely on the tiniest details. It was part of the 3D Modeling course in my third year of university, allowing me to consolidate my knowledge and skills in a practical context.
+  </p>
 
    
+<div class="cajanegra2"></div>
+   <a href="contact.html" class="contact-button">Want more info? Contact me!</a>
+
+<section><footer>    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 Sasha's Workshop - All rights reserved</p>
+    </footer></footer></section>
+
+
+    
+
+
     <script src="js/scripts.js"></script>
+
+  
 </body>
 
 </html>
