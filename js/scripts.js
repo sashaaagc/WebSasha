@@ -199,4 +199,3 @@ function toggleMenu() {
     const menu = document.querySelector('nav ul');
     menu.classList.toggle('show'); // Alterna la clase que muestra el menú
 }
-
