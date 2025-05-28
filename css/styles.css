@@ -175,6 +175,58 @@ nav ul li a:hover {
         cursor: pointer;
         margin-left: auto;
     }
+    /* Estilos base del menú (oculto por defecto) */
+nav ul {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 999;
+}
+
+/* Cuando el menú se muestra */
+nav ul.show {
+  display: flex;
+}
+
+nav ul li {
+  margin: 20px 0;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+/* Estilos del botón (ya los tienes, pero aquí los junto) */
+.menu-toggle {
+  display: block;
+  color: #fff;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: auto;
+  transition: color 0.5s ease;
+  position: relative;
+  z-index: 1000; /* Para que esté por encima del menú */
+}
+
+.menu-toggle:hover {
+  color: #046865;
+}
+
     
 }
 
@@ -671,15 +723,6 @@ h4{
 
 
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #000000;  
-    width: 100%;
-    bottom: 0;
-}
-
 
 
 
@@ -816,11 +859,68 @@ footer {
 
 
 
+
+.cajanegra{
+    width: 100%;
+    height: 250px;
+    background-color: #000000;
+}
+
+.cajanegra1{
+    width: 100%;
+    height: 100px;
+    background-color: #000000;
+  
+}
+.cajanegra2{
+    width: 100%;
+    height: 50px;
+    background-color: #000000;
+  
+}
+.cajanegra3 {
+    width: 100%;
+    height: 40vh; /* Ajusta la altura a un 50% del tamaño de la pantalla */
+    background-color: #000000;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos TEXTOS PROYECTOS 1 2 y 3 */
+
+
 .project-presentation {
     overflow-y: hidden;
-    padding: 80px 30px;
+    padding-top: 80px;
+    padding-left: 30px;
+    padding-right: 30px;
     text-align: center;
     background: black;
+   
    
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px); /* Desenfoque sutil de fondo */
@@ -829,8 +929,11 @@ footer {
 .presentation-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 30px;
-    height: 1250px;
+  
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    height: 100%
 }
 
 /* Título del proyecto */
@@ -922,51 +1025,7 @@ footer {
 }
 
 /* Títulos de las secciones */
-.project-section-title {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-top: 0;
-    margin-bottom: 20px;
-    color: #fff;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-align: center;
-}
 
-/* Detalles del proyecto */
-.project-details {
-    font-size: 0.9rem;
-    font-weight: 400;
-    color: #bbb;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-/* Resultados del proyecto */
-.project-results {
-    font-size: 0.9rem;
-    font-weight: 400;
-    line-height: 1.7;
-    color: #e0e0e0;
-
-     text-align: center;
-}
-
-/* Respuesta responsiva para pantallas más pequeñas */
-@media (max-width: 768px) {
-    .image-and-text {
-        flex-direction: column; /* Las cajas se apilan verticalmente */
-    }
-
-    .project-image,
-    .text-container {
-        max-width: 100%; /* Cada caja ocupa el ancho completo */
-    }
-}
-
-/* Evitar desbordamiento */
-
-/* CSS para la animación de aparición */
 
 .project-image main {
     opacity: 0; /* Inicialmente invisible */
@@ -1005,34 +1064,6 @@ transform: uppercase;
     opacity: 1; /* Hace que el texto y la imagen sean visibles */
     transform: translateY(0); /* Vuelve a la posición original */
 }
-.cajanegra{
-    width: 100%;
-    height: 250px;
-    background-color: #000000;
-}
-
-.cajanegra1{
-    width: 100%;
-    height: 100px;
-    background-color: #000000;
-  
-}
-.cajanegra2{
-    width: 100%;
-    height: 50px;
-    background-color: #000000;
-  
-}
-.cajanegra3 {
-    width: 100%;
-    height: 40vh; /* Ajusta la altura a un 50% del tamaño de la pantalla */
-    background-color: #000000;
-  }
-  
-
-
-
-/* Estilos básicos */
 
 
 /* Define la animación */
@@ -1178,16 +1209,169 @@ transform: uppercase;
         font-size: 1rem; /* Reducimos el tamaño del texto */
     }
 }
+.project-video.main,
+.project-image.main {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+}
 
 
 
+/* Contenedor principal de texto */
+.text-container {
+  background-color: #000;
+  color: #eee;
+  font-family: 'Montserrat', sans-serif;
+  padding: 2rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* Títulos de secciones principales */
+.project-section-title {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  border-bottom: 2px solid #555;
+  padding-bottom: 0.4rem;
+  text-align: ;
+}
+
+/* Párrafos descriptivos */
+.project-details,
+.project-results {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 1.6rem;
+}
+
+/* Contenedor para premios */
+.award-item {
+  display: grid;
+  grid-template-columns: 70px 1fr; /* icono y texto */
+  align-items: start;
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+}
+
+/* Imagen del premio */
+/* Imagen del premio */
+.award-icon {
+  width: 70px; /* un poco más grande */
+  height: auto;
+  flex-shrink: 0;
+  object-fit: contain;
+  filter: brightness(1.1);
+  align-self: flex-start;
+  margin-top: 0.7rem; /* baja ligeramente el icono */
+}
+
+
+/* Texto del premio */
+.award-text {
+  flex: 1;
+  min-width: 0; /* permite al texto ajustarse correctamente */
+  text-align: left;
+  color: #ddd;
+  margin: 0;
+}
+
+/* Título dentro del premio */
+ .award-heading {
+  margin: 0 0 0.3rem 0;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #f0f0f0;
+  
+}
+
+/* Párrafo dentro del premio */
+.award-text p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: #bbb;
+  line-height: 1.4;
+}
+
+.award-text strong {
+  color: #fff;
+  font-weight: 700;
+}
+
+.award-text em {
+  font-style: italic;
+  color: #999;
+}
+
+/* Responsive: solo ajusta tamaños, no estructura */
+@media (max-width: 600px) {
+  .award-icon {
+    width: 48px;
+  }
+  .award-heading {
+    font-size: 1.05rem;
+  }
+  .award-text p {
+    font-size: 0.9rem;
+  }
+}
+
+.contact-button {
+  width: 270px;
+  height: 45px;
+  font-weight: 300;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px #046865, 0 0 0px #046865, 0 0 30px #046865;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  margin: 0 auto 2rem auto; /* Esto centra horizontalmente */
+}
+
+
+.contact-button:hover {
+  background-color: #000000;
+  box-shadow: 0 0 5px #046865, 0 0 6px #046865, 0 0 6px #046865;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+
+
+
+
+
+
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #000000;
-    font-size: 0.7rem;
+    background-color: #000000;  
     width: 100%;
     bottom: 0;
 }
 
 
+    
+    
+    .btn1:hover {
+       
+    }
